@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Website</title>
+  </head>
+  <body>
+    <h1>Title : {{title}}</h1>
+    <h1>Content : {{content}}</h1>
+    {% if age > 18 %}
+    <h1>Your are Adult</h1>
+    {% else %}
+    <h1>Your are Child</h1>
+    {% endif %} {%for i in courses %}
+    <h1>name of course is :{{i.name | capfirst}}</h1>
+    {%endfor%}
+
+    <h1>Total courses available : {{ courses | length }}</h1>
+    <h1>{{ Birthday | date:"D d M Y" }}</h1>
+    <h1>{{ Birthday | date:"SHORT_DATE_FORMAT" }}</h1>
+    <h1>{{ age | add:"5" }}</h1>
+    <h1>{{ content | cut:" " }}</h1>
+    <h1>{{ courses | dictsort:"name" }}</h1>
+    <h1>{{ paragraph | linenumbers }}</h1>
+    <h1>{{ paragraph  | truncatewords:36 }}</h1 >
+    <h1>{{ content | slugify }}</h1>
+    <h1>{{ lst | join:", " }}</h1>
+    <h1>{{ lst | slice:"1:2" }}</h1>
+    <h1>{{ courses | dictsortreversed:"name" }}</h1>
+    <h1>First Course: {{ courses|first }}</h1>
+    <h1>Last Course: {{ courses|last }}</h1>
+    <h1>{{ content | safe }}</h1>
+    <h1>{{ empty_var|default:"Default Value" }}</h1>
+    <h1>{{ paragraph | filesizeformat }}</h1>
+    <h1>{{ content | wordcount }}</h1>
+    {% comment %} <h1>{{ content | replace:"home", "homepage" }}</h1> {% endcomment %}
+  </body>
+</html>

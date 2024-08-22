@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'about_us_css/style.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="text-center">
+    <img src="{% static 'images/about_us.png' %}" alt="About Us">
+    <h1>Baper Restaurant</h1>
+    <p>Our restaurant has been serving delicious meals for over 10 years...</p>
+</div>
+{% endblock %}
